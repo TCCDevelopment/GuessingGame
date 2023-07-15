@@ -1,10 +1,10 @@
 import { StatusBar } from "expo-status-bar";
 import { StyleSheet } from "react-native";
 
-import StartGameScren from "./screens/StartGameScreen";
+import StartGameScreen from "./screens/StartGameScreen";
 
 export default function App() {
-  return <StartGameScren />;
+  return <StartGameScreen />;
 }
 
 const styles = StyleSheet.create({});

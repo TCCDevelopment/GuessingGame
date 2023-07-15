@@ -1,8 +1,8 @@
 import { View, StyleSheet, TextInput } from "react-native";
 
-import PrimaryButton from "../components/PrimaryButton.js";
+import PrimaryButton from "../components/PrimaryButton";
 
-function StartGameScren() {
+function StartGameScreen() {
   return (
     <View style={styles.inputContainer}>
       <TextInput />
@@ -12,7 +12,7 @@ function StartGameScren() {
   );
 }
 
-export default StartGameScren;
+export default StartGameScreen;
 
 const styles = StyleSheet.create({
   inputContainer: {
@@ -26,5 +26,5 @@ const styles = StyleSheet.create({
     shadowOffset: { width: 0, height: 2 },
     shadowRadius: 6,
     shadowOpacity: 0.25
-  },
+  }
 });
