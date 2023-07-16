@@ -15,7 +15,7 @@ function StartGameScreen() {
   }
 
   function resetInputHandler() {
-    console.log('Resetting Number')
+    setEnteredNumber('');
   }
 
   return (
