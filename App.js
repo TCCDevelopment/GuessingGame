@@ -15,7 +15,7 @@ export default function App() {
   let screen = <StartGameScreen onPickNumber={pickedNumberHandler} />;
 
   if (userNumber) {
-    screen = <GameScreen />
+    screen = <GameScreen />;
   }
 
   return (
@@ -37,6 +37,6 @@ const styles = StyleSheet.create({
     flex: 1,
   },
   backgroundImage: {
-    opacity: 0.15
-  }
+    opacity: 0.15,
+  },
 });
