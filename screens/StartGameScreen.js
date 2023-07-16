@@ -10,6 +10,14 @@ function StartGameScreen() {
     setEnteredNumber(enteredNumber);
   }
 
+  function confirmInputHandler() {
+    console.log('Confirming Number')
+  }
+
+  function resetInputHandler() {
+    console.log('Resetting Number')
+  }
+
   return (
     <View style={styles.inputContainer}>
       <TextInput
@@ -20,8 +28,8 @@ function StartGameScreen() {
         value={enteredNumber}
       />
       <View style={styles.buttonsContainer}>
-        <PrimaryButton>Reset</PrimaryButton>
-        <PrimaryButton>Confirm</PrimaryButton>
+        <PrimaryButton onPress={resetInputHandler}>Reset</PrimaryButton>
+        <PrimaryButton onPress={confirmInputHandler}>Confirm</PrimaryButton>
       </View>
     </View>
   );
