@@ -11,12 +11,8 @@ function StartGameScreen() {
         keyboardType="number-pad"
       />
       <View style={styles.buttonsContainer}>
-        <View style={styles.button}>
-          <PrimaryButton>Reset</PrimaryButton>
-        </View>
-        <View style={styles.button}>
-          <PrimaryButton>Confirm</PrimaryButton>
-        </View>
+        <PrimaryButton>Reset</PrimaryButton>
+        <PrimaryButton>Confirm</PrimaryButton>
       </View>
     </View>
   );
@@ -52,8 +48,5 @@ const styles = StyleSheet.create({
   },
   buttonsContainer: {
     flexDirection: "row",
-  },
-  button: {
-    flex: 1,
   },
 });
