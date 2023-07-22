@@ -20,26 +20,35 @@ let minBoundary = 1;
 let maxBoundary = 100;
 
 function GameScreen({ userNumber }) {
-  const initialGuess = generateRandomBetween( minBoundary, maxBoundary, userNumber );
+  const initialGuess = generateRandomBetween(
+    minBoundary,
+    maxBoundary,
+    userNumber
+  );
   const [currentGuess, setCurrentGuess] = useState(initialGuess);
 
-  function nextGuessHandler(direction) { // direction => 'lower, 'greater'
+  function nextGuessHandler(direction) {
+    // direction => 'lower, 'greater'
     if (
-        (direction == 'lower' && currentGuess < userNumber) ||
-        (direction == 'greater' && currentGuess > userNumber) 
-    ){
-        Alert.alert("Don't lie!", "You know that this is wrong...", [
-            { text: 'Sorry!', style: 'cancel'},
-        ]);
-        return;
+      (direction == "lower" && currentGuess < userNumber) ||
+      (direction == "greater" && currentGuess > userNumber)
+    ) {
+      Alert.alert("Don't lie!", "You know that this is wrong...", [
+        { text: "Sorry!", style: "cancel" },
+      ]);
+      return;
     }
-    
+
     if (direction === "lower") {
       maxBoundary = currentGuess;
     } else {
       minBoundary = currentGuess + 1;
     }
-    const newRndNumber = generateRandomBetween( minBoundary, maxBoundary, currentGuess );
+    const newRndNumber = generateRandomBetween(
+      minBoundary,
+      maxBoundary,
+      currentGuess
+    );
     setCurrentGuess(newRndNumber);
   }
 
