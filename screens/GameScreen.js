@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
-import { StyleSheet, View, Alert, Text } from "react-native";
-import { Ionicons } from '@expo/vector-icons';
+import { StyleSheet, View, Alert, Text, FlatList } from "react-native";
+import { Ionicons } from "@expo/vector-icons";
 
 import Title from "../components/ui/Title";
 import NumberContainer from "../components/game/NumberContainer";
@@ -60,7 +60,7 @@ function GameScreen({ userNumber, onGameOver }) {
       currentGuess
     );
     setCurrentGuess(newRndNumber);
-    setGuessRounds(prevGuessRounds => [newRndNumber, ...prevGuessRounds]);
+    setGuessRounds((prevGuessRounds) => [newRndNumber, ...prevGuessRounds]);
   }
 
   return (
@@ -79,13 +79,20 @@ function GameScreen({ userNumber, onGameOver }) {
           </View>
           <View style={styles.button}>
             <PrimaryButton onPress={nextGuessHandler.bind(this, "greater")}>
-            <Ionicons name="md-add" size={24} color="white" />
+              <Ionicons name="md-add" size={24} color="white" />
             </PrimaryButton>
           </View>
         </View>
       </Card>
       <View>
-        {guessRounds.map(guessRound => <Text key={guessRound}>{guessRound}</Text>)}
+        {/* {guessRounds.map((guessRound) => (
+          <Text key={guessRound}>{guessRound}</Text>
+        ))} */}
+        <FlatList
+          data={guessRounds}
+          renderedItem={(itemData) => <Text>{itemData.item}</Text>}
+          keyExtractor={(item) => item}
+        />
       </View>
     </View>
   );
