@@ -33,6 +33,7 @@ const styles = StyleSheet.create({
     paddingTop: 24,
     justifyContent: "center",
     alignItems: "center",
+    marginHorizontal: 20,
   },
   imageContainer: {
     width: 300,
