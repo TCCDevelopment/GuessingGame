@@ -1,7 +1,43 @@
-import { Text } from "react-native";
+import { StyleSheet, View, Image, Text } from "react-native";
+
+import Title from "../components/ui/Title";
+
+import { Colors } from "react-native/Libraries/NewAppScreen";
 
 function GameOverScreen() {
-  return <Text>Game is over!</Text>;
+  return (
+    <View style={styles.rootContainer}>
+      <Title>GAME OVER!</Title>
+      <View style={styles.imageContainer}>
+        <Image
+          source={require("../assets/images/success.png")}
+          style={styles.image}
+        />
+      </View>
+    </View>
+  );
 }
 
 export default GameOverScreen;
+
+const styles = StyleSheet.create({
+  rootContainer: {
+    flex: 1,
+    paddingTop: 24,
+    justifyContent: 'center',
+    alignItems: 'center'
+  },
+  imageContainer: {
+    width: 300,
+    height: 300,
+    borderRadius: 150,
+    borderWidth: 3,
+    borderColor: Colors.primary800,
+    overflow: "hidden",
+    margin: 36,
+  },
+  image: {
+    width: "100%",
+    height: "100%",
+  },
+});
