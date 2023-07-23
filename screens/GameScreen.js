@@ -112,6 +112,7 @@ const styles = StyleSheet.create({
   screen: {
     flex: 1,
     padding: 24,
+    alignItems: "center",
   },
   instructionText: {
     marginBottom: 12,
@@ -122,8 +123,8 @@ const styles = StyleSheet.create({
   button: {
     flex: 1,
   },
-  listContainer:{
-    flex: 1, 
+  listContainer: {
+    flex: 1,
     padding: 16,
-  }
+  },
 });
