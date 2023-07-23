@@ -40,6 +40,11 @@ export default function App() {
     setGameIsOver(true);
   }
 
+  function restartGameHandler() {
+    setUserNumber(null);
+    setGameIsOver(false);
+  }
+
   let screen = <StartGameScreen onPickNumber={pickedNumberHandler} />;
 
   if (userNumber) {
@@ -49,7 +54,12 @@ export default function App() {
   }
 
   if (gameIsOver) {
-    screen = <GameOverScreen></GameOverScreen>;
+    screen = (
+      <GameOverScreen
+        userNumber={userNumber}
+        onStartNewGame={restartGameHandler}
+      ></GameOverScreen>
+    );
   }
 
   return (

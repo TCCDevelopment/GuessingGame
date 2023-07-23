@@ -5,7 +5,7 @@ import PrimaryButton from "../components/ui/PrimaryButton";
 
 import { Colors } from "react-native/Libraries/NewAppScreen";
 
-function GameOverScreen() {
+function GameOverScreen({ userNumber, onStartNewGame }) {
   return (
     <View style={styles.rootContainer}>
       <Title>GAME OVER!</Title>
@@ -16,10 +16,11 @@ function GameOverScreen() {
         />
       </View>
       <Text style={styles.summaryText}>
-        Your phone needed <Text style={styles.highlightText}>X</Text> rounds to
-        guess the number <Text style={styles.highlightText}>Y</Text>.
+        Your phone needed
+        <Text style={styles.highlightText}>X</Text> rounds to guess the number
+        <Text style={styles.highlightText}>{userNumber}</Text>.
       </Text>
-      <PrimaryButton>Start New Game</PrimaryButton>
+      <PrimaryButton onPress={onStartNewGame}>Start New Game</PrimaryButton>
     </View>
   );
 }
