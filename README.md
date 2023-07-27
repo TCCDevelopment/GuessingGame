@@ -8,6 +8,7 @@
 #### Course GitHub Link: https://github.com/academind/react-native-practical-guide-code/
 
 This is the "Guess My Number" game app created in the course (Section 4, Lectures 45-78)
+
     #### Key things learned: 
         * Custom Components like buttons with UI feedback (48, 52, 62,  67b)
         * Styling shadow differences between iOS and Android (49)
@@ -30,6 +31,7 @@ This is the "Guess My Number" game app created in the course (Section 4, Lecture
 
 The course continued with this game into the next section to apply adaptive user interfaces. 
 (Section 5, Lectures 79-89)
+
     #### Key things learned: 
         * Dynamic Widths (80)
         * Dimensions API (81-84)
