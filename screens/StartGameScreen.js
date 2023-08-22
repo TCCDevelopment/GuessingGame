@@ -46,7 +46,10 @@ function StartGameScreen({ onPickNumber }) {
 
   return (
     <ScrollView style={styles.screen}>
-      <KeyboardAvoidingView style={styles.screen} behavior="position">
+      <KeyboardAvoidingView
+        style={styles.screen}
+        behavior="position"
+      >
         <View style={[styles.rootContainer, { marginTop: marginTopDistance }]}>
           <Title>Guess My Number</Title>
           <Card>
